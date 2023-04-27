@@ -1,0 +1,87 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    overflow: hidden; /* Permet d'éviter les problèmes de hauteur avec le float */
+}
+.left_card .right_card{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.right_card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 55%;
+    margin: auto;
+    padding: 15px;
+
+}
+.left_card {
+    border: none;
+    flex-basis: 45%;
+
+
+}
+
+.card-header {
+    border-radius: 10px 20px 30px 40px;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.form-check-label a {
+    color: #007bff;
+}
+
+.form-check-label a:hover {
+    color:brown ;
+}
+.form-group label {
+    font-weight: bold;
+
+}
+
+.form-check-label {
+    margin-right: 1rem;
+}
+
+.form-check-input:checked + .form-check-label:before {
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+.statut {
+    text-align: left;
+
+
+}
+
+
+}
