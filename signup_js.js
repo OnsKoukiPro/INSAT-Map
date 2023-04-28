@@ -17,41 +17,23 @@ const accepterCheckbox = document.getElementById('accepter');
 
 
     // Valider les champs du formulaire
-    if (nom.value === '') {
-        alert('Veuillez saisir votre nom.');
-        nom.focus();
-        return false;
-    }
 
-    if (prenom.value === '') {
-        alert('Veuillez saisir votre prénom.');
-        prenom.focus();
-        return false;
-    }
 
-    if (email.value === '') {
-        alert('Veuillez saisir votre adresse email.');
+    if (!(email.value.endsWith("@insat.ucar.tn") || email.value.endsWith("@insat.u-carthage.tn"))) {
+        alert('Veuillez entrer votre adresse mail institutionnel ! \n (qui se termine par "@insat.ucar.tn" ou "@insat.u-carthage.tn")');
         email.focus();
         return false;
     }
 
-    if (matricule.value === '') {
-        alert('Veuillez saisir votre matricule.');
+
+
+    if (!(/^\d{6}$/.test(matricule.value))) {
+        alert('La matricule doit être un numéro de 6 chiffres !"');
         matricule.focus();
         return false;
     }
 
-    if (password1.value === '') {
-        alert('Veuillez saisir votre mot de passe.');
-        password1.focus();
-        return false;
-    }
 
-    if (password2.value === '') {
-        alert('Veuillez confirmer votre mot de passe.');
-        password2.focus();
-        return false;
-    }
 
     if (password1.value !== password2.value) {
         alert('Les mots de passe ne correspondent pas.');
@@ -61,13 +43,29 @@ const accepterCheckbox = document.getElementById('accepter');
         return false;
     }
 
-    if (!accepterCheckbox.checked) {
-        alert('Vous devez accepter les conditions générales d\'utilisation.');
-        accepterCheckbox.focus();
-        return false;
-    }
 
 
     // si tous les champs sont valides, envoyer le formulaire
     return true;
+}
+
+function acceptCookies() {
+    // Get the checkbox element
+    var acceptCookiesCheckbox = document.getElementById("accepter2");
+
+    // Set the cookie if the checkbox is checked
+    if (acceptCookiesCheckbox.checked) {
+        document.cookie = "acceptCookies=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    } else {
+        document.cookie = "acceptCookies=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    }
+}
+
+// Check if the user has already accepted cookies
+if (document.cookie.indexOf("acceptCookies=true") !== -1) {
+    console.log("Cookies have been accepted.");
+    // Check the checkbox if the user has already accepted cookies
+    document.getElementById("accepter2").checked = true;
+} else {
+    console.log("Cookies have not been accepted.");
 }
