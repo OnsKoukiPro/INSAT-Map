@@ -1,7 +1,10 @@
 body {
-    background-color: #f8f9fa;
+    /*background-color: #f8f9fa;*/
     margin: 0;
     padding: 0;
+    background-image: url('back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
     display: flex;
@@ -22,6 +25,13 @@ body {
     flex-basis: 40%;
     margin: auto;
     padding: 15px;
+    background-color: #fffaf1 ;
+    position: absolute;
+    top: 181px;
+    right: 200px;
+    height: 331px;
+    width: 500px;
+
 
 }
 .left_card {
@@ -67,5 +77,77 @@ body {
 .statut {
     text-align: left;
 
+}
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#project_name {
+    font-size: 47px;
+    position: absolute;
+    top: 240px;
+    left: 122px;
+    font-weight: bold;
+    color: #1f4068;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 }
+
+#project_slogan {
+    font-size: 34px;
+    position: absolute;
+    top: 300px;
+    left: 196px;
+    color: #4a4e69;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+.input-group {
+   /* position: relative;
+    display: flex;
+    align-items: center;*/
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+/*.input-group input[type="text"],
+.input-group input[type="password"] {
+    padding-right: 40px; /* adjust the padding to make room for the icon
+}
+.input-group .icon {
+    position: absolute;
+    right:7px;
+}*/
+input {
+    width: 80%;
+    padding: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+
+i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    left: 10px;
+
+}
+

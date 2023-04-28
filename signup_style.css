@@ -1,7 +1,10 @@
 body {
-    background-color: #f8f9fa;
+    /*background-color: #f8f9fa;*/
     margin: 0;
     padding: 0;
+    background-image: url('back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
     display: flex;
@@ -15,15 +18,36 @@ body {
     align-items: center;
 
 }
+
+
 .right_card {
+    background-color: #fffaf1 ;
     border: none;
     border-radius: 10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-    flex-basis: 55%;
-    margin: auto;
+   /* margin: auto; */
     padding: 15px;
+    max-width: 600px;
+    position: absolute;
+    right: 100px;
+    top: 4px;
+    width: 90%;
+
+
 
 }
+
+.card-body {
+    height: 90%;}
+
+@media only screen and (min-width: 768px) {
+    .right_card {
+        flex-basis: 55%;
+    }
+}
+
+
+
 .left_card {
     border: none;
     flex-basis: 45%;
@@ -41,12 +65,17 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+.form-control{
+    font-size: 13px;
+}
+
 .form-check-input:focus {
     box-shadow: none;
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #0069d9;
+
     border-color: #007bff;
 }
 
@@ -57,13 +86,15 @@ body {
 
 .form-check-label a {
     color: #007bff;
+
 }
 
 .form-check-label a:hover {
-    color:brown ;
+    color:red ;
 }
 .form-group label {
     font-weight: bold;
+    font-size: 15px;
 
 }
 
@@ -83,5 +114,38 @@ body {
 
 }
 
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
 
+#project_name {
+    font-size: 47px;
+    position: absolute;
+    top: 240px;
+    left: 122px;
+    font-weight: bold;
+    color: #1f4068;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#project_slogan {
+    font-size: 34px;
+    position: absolute;
+    top: 300px;
+    left: 196px;
+    color: #4a4e69;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#administratif #prof #etudiant{
+    position: absolute; left: 20px;
 }
