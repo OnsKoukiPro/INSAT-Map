@@ -1,3 +1,26 @@
+
+function acceptCookies() {
+    // Get the checkbox element
+    var acceptCookiesCheckbox = document.getElementById("accepter2");
+
+    // Set the cookie if the checkbox is checked
+    if (acceptCookiesCheckbox.checked) {
+        document.cookie = "acceptCookies=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    } else {
+        document.cookie = "acceptCookies=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    }
+
+    /*
+    // Check if the user has already accepted cookies
+    if (document.cookie.indexOf("acceptCookies=true") !== -1) {
+        console.log("Cookies have been accepted.");
+        // Check the checkbox if the user has already accepted cookies
+        document.getElementById("accepter2").checked = true;
+    } else {
+        console.log("Cookies have not been accepted.");
+    }   */
+}
+
 function validateForm() {
 
 
@@ -46,26 +69,6 @@ const accepterCheckbox = document.getElementById('accepter');
 
 
     // si tous les champs sont valides, envoyer le formulaire
+    acceptCookies();
     return true;
-}
-
-function acceptCookies() {
-    // Get the checkbox element
-    var acceptCookiesCheckbox = document.getElementById("accepter2");
-
-    // Set the cookie if the checkbox is checked
-    if (acceptCookiesCheckbox.checked) {
-        document.cookie = "acceptCookies=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-    } else {
-        document.cookie = "acceptCookies=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-    }
-}
-
-// Check if the user has already accepted cookies
-if (document.cookie.indexOf("acceptCookies=true") !== -1) {
-    console.log("Cookies have been accepted.");
-    // Check the checkbox if the user has already accepted cookies
-    document.getElementById("accepter2").checked = true;
-} else {
-    console.log("Cookies have not been accepted.");
 }
