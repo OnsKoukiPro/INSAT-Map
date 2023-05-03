@@ -65,6 +65,10 @@ body {
 
 
 
+.creerbtn:hover{
+    background-color: #028a0f !important;
+    border-color: darkgreen !important;
+}
 
 .form-group label {
     font-weight: bold;
@@ -91,45 +95,49 @@ body {
 }
 
 #project_name {
-    font-size: 47px;
+    font-size: 70px !important;
     position: absolute;
     top: 240px;
     left: 122px;
-    font-weight: bold;
-    color: #1f4068;
+    font-weight: bold !important;
+    color: #990000 !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: -4px -4px 5px rgba(0, 0, 0, 0.2);
 
 
 }
 
 #project_slogan {
-    font-size: 34px;
+    font-size: 40px !important;
+    font-weight: bold !important;
     position: absolute;
-    top: 300px;
+    top: 320px;
     left: 196px;
-    color: #4a4e69;
+    color: #1f4068 !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+
+}
+#project_slogan2 {
+    font-size: 25px !important;
+    font-weight: bold !important;
+    position: absolute;
+    top: 365px !important;
+    left: 150px !important;
+    color: black !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
 .input-group {
-   /* position: relative;
-    display: flex;
-    align-items: center;*/
+
     position: relative;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
-/*.input-group input[type="text"],
-.input-group input[type="password"] {
-    padding-right: 40px; /* adjust the padding to make room for the icon
-}
-.input-group .icon {
-    position: absolute;
-    right:7px;
-}*/
+
+
 input {
     width: 80%;
     padding: 25px;
@@ -139,15 +147,17 @@ input {
     font-size: 18px;
 }
 
+
+
 input:focus {
-    outline: none;
+    outline: none;}
 
 i {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    left: 10px;
+    position: absolute; !important;
+    top: 50%; !important;
+    right: 10px; !important;
+    transform: translateY(-50%); !important;
+    left: 10px; !important;
 
 }
 
