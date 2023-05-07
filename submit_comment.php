@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-<h1>Submit Comment</h1>
+<h1>Confirmation d'ajout</h1>
 
 <?php
 $db_conn=mysqli_connect("localhost","root","","map") or die ("connexion impossible: ".mysqli_connect_error());
@@ -50,16 +50,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $insertResult = mysqli_query($db_conn, $insertQuery);
 
             if ($insertResult) {
-                echo "<br><br><p>Thank you, $nom, $prenom, for your comment and rating of $rating stars!</p>";
+                echo "<br><br><p>Merci, $nom $prenom, pour votre commentaire et votre évaluation de $rating etoiles!</p>";
             } else {
-                echo "<br><br><p>Oops! Failed to insert the comment.</p>";
+                echo "<br><br><p>Oops! Impossible d'insérer le commentaire.</p>";
             }
         } else {
-            echo "<br><br><p>Oops! User with ID $user does not exist.</p>";
+            echo "<br><br><p>Oops! Utilisateur avec la matricule $user n'existe pas.</p>";
         }
     } else {
         // Display an error message if required fields are missing
-        echo "<br><br><p>Oops! Some required fields are missing.</p>";
+        echo "<br><br><p>Oops! Certains champs obligatoires sont manquants.</p>";
     }
 }
 
