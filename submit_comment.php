@@ -73,6 +73,8 @@
             margin-bottom: 5px;
         }
     </style>
+    <?php echo "<a href='http://localhost:8000/?views=Vue' class='btn btn-primary'>Voir la Carte</a>";
+    ?>
 </head>
 <body style="background-image: url('back1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 
