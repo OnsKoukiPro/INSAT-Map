@@ -8,56 +8,59 @@ use PHPMailer\Test\SendTestCase;
 
 $check = false;
 
-if(isset($_POST['email']) || isset($_SESSION['verifcode'])){
+if(isset($_POST['email']) || isset($_SESSION['verifcode'])){ // 
+
     $_SESSION['email'] = $_POST['email'] ?? $_SESSION['email'];
-if(isset($_SESSION['verificationcode']) && isset($_POST['verifcode']) ){
-    $check = $_POST['verifcode'] == $_SESSION['verificationcode'];
-    unset($_SESSION['verificationcode']);
-} else {
 
+    if(isset($_SESSION['verificationcode']) && isset($_POST['verifcode']) ){
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+        $check = $_POST['verifcode'] == $_SESSION['verificationcode'];
+        unset($_SESSION['verificationcode']);
 
-// SMTP server configuration
-$smtp_server = 'smtp.gmail.com';
-$smtp_port = 587;
-$smtp_username = 'medsaifeddinek@gmail.com';
-$smtp_password = 'dcjqazbseqaowtai';
-
-// Create PHPMailer instance
-$mail = new PHPMailer;
-$mail->isSMTP();
-$mail->Host = $smtp_server;
-$mail->Port = $smtp_port;
-$mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls';
-$mail->Username = $smtp_username;
-$mail->Password = $smtp_password;
-
-
-// Email settings
-$code = random_string(32);
-$_SESSION['verificationcode'] = $code;
-
-$to = $_SESSION['email'];
-$subject = 'Code de verification';
-$message = $code;
-$mail->setFrom($smtp_username, 'Your Name');
-$mail->addAddress($to);
-$mail->Subject = $subject;
-$mail->Body = $message;
-
-// Send email
-if($mail->send()) {
-    echo 'Email sent successfully !';
-
-} else {
-    echo 'Email sending failed: ' . $mail->ErrorInfo;
-}
-
-}
+    } else {
+    
+    
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
+    
+    // SMTP server configuration
+    $smtp_server = 'smtp.gmail.com';
+    $smtp_port = 587;
+    $smtp_username = 'mapyw23@gmail.com';
+    $smtp_password = 'wpgbezxhgnfavugq';
+    
+    // Create PHPMailer instance
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->Host = $smtp_server;
+    $mail->Port = $smtp_port;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+    $mail->Username = $smtp_username;
+    $mail->Password = $smtp_password;
+    
+    
+    // Email settings
+    $code = random_string(32);
+    $_SESSION['verificationcode'] = $code;
+    $to = $_SESSION['email'];
+    $subject = 'Code de verification';
+    $message = $code;
+    $mail->setFrom($smtp_username, 'Your Name');
+    $mail->addAddress($to);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    
+    // Send email
+    if($mail->send()) {
+        echo 'Email sent successfully !';
+    
+    } else {
+        echo 'Email sending failed: ' . $mail->ErrorInfo;
+    }
+    
+    }
 } else {
     
 }
