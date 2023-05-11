@@ -30,7 +30,10 @@ function validateForm() {
 //const form = document.querySelector('form');
 const nom = document.getElementById('nom');
 const prenom = document.getElementById('prenom');
+<<<<<<< HEAD
 const email = document.getElementById('email');
+=======
+>>>>>>> 604ee3df1d7d7f3d3ddefbd07b5ddbd224bfcf46
 
 const matricule = document.getElementById('matricule');
 const password1 = document.getElementById('motdepasse');
@@ -42,6 +45,7 @@ const accepterCheckbox = document.getElementById('accepter');
     // Valider les champs du formulaire
 
 
+<<<<<<< HEAD
     if (!(email.value.endsWith("@insat.ucar.tn") || email.value.endsWith("@insat.u-carthage.tn"))) {
         alert('Veuillez entrer votre adresse mail institutionnel ! \n (qui se termine par "@insat.ucar.tn" ou "@insat.u-carthage.tn")');
         email.focus();
@@ -49,6 +53,8 @@ const accepterCheckbox = document.getElementById('accepter');
     }
 
 
+=======
+>>>>>>> 604ee3df1d7d7f3d3ddefbd07b5ddbd224bfcf46
 
     if (!(/^\d{6}$/.test(matricule.value))) {
         alert('La matricule doit être un numéro de 6 chiffres !"');

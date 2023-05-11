@@ -1,7 +1,4 @@
-<!doctype html>
-<html lang="en-us">
-	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=EDGE"/><title>Expérience sans titre 1</title><link rel="shortcut icon" href="assets/exb.ico"><base href="./cdn/1/"/><style>html {
+<!doctype html><html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/><meta http-equiv="X-UA-Compatible" content="IE=EDGE"/><title>Expérience sans titre 1</title><link rel="shortcut icon" href="assets/exb.ico"><base href="./cdn/1/"/><style>html {
 				scrollbar-color: var(--light-600) var(--light-200);
 			}
 			html, body{
@@ -27,7 +24,9 @@
 				width: 100%;
 				height: 100%;
 				display: none;
-			}</style><script type="empty"></script></head><body><div id="loading"><style>.loading-content{
+			}</style><script type="empty">/**
+			Add this empty script tag can help API module load find the correct "insertPointSibling"
+			*/</script></head><body><div id="loading"><style>.loading-content{
       position: absolute;
       top: 0;
       bottom: 0;
@@ -70,8 +69,7 @@
     }
 
     @-webkit-keyframes loading-keys-app-loading{0%,80%,100%{opacity:.75;box-shadow:0 0 #076fe5;height:32px;}40%{opacity:1;box-shadow:0 -8px #076fe5;height:40px;}}
-    @keyframes loading-keys-app-loading{0%,80%,100%{opacity:.75;box-shadow:0 0 #076fe5;height:32px;}40%{opacity:1;box-shadow:0 -8px #076fe5;height:40px;}}</style>
-	<div class="loading-content"><div class="justify-content-center jimu-primary-loading"></div></div></div><div id="app"></div><script type="webpack-options" id="webpack-options">{
+    @keyframes loading-keys-app-loading{0%,80%,100%{opacity:.75;box-shadow:0 0 #076fe5;height:32px;}40%{opacity:1;box-shadow:0 -8px #076fe5;height:40px;}}</style><div class="loading-content"><div class="justify-content-center jimu-primary-loading"></div></div></div><div id="app"></div><script type="webpack-options" id="webpack-options">{
 				"mountPath": "/",
 				"isOutOfExb": true,
 				"hostEnv": "prod",
@@ -83,8 +81,7 @@
 				"isBuilder": false,
 				"isSite": false,
 				"isInPortal": false
-			}</script>
-	<script type="systemjs-importmap">{
+			}</script><script type="systemjs-importmap">{
 	"imports": {
 		"jimu-core": "https://BASE_URL/jimu-core/index.js",
 		"jimu-core/": "https://BASE_URL/jimu-core/",
@@ -112,7 +109,4 @@
 
 		"esri/": "https://API_URL/esri/"
 	}
-}
-</script><script src="./jimu-core/init.js"></script>
-</body>
-</html>
+}</script><script src="./jimu-core/init.js"></script></body></html>

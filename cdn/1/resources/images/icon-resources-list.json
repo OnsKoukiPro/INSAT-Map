@@ -1,0 +1,17 @@
+{
+  "undefined": {
+    "svg": "<svg viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" class=\"css-1i7frhi jimu-icon\"><path d=\"M2 1a1 1 0 100 2h12a1 1 0 100-2H2zm0-1h12a2 2 0 010 4H2a2 2 0 010-4zm0 7a1 1 0 100 2h12a1 1 0 100-2H2zm0-1h12a2 2 0 010 4H2a2 2 0 010-4zm0 7a1 1 0 100 2h12a1 1 0 100-2H2zm0-1h12a2 2 0 010 4H2a2 2 0 010-4z\" fill=\"currentColor\" fill-rule=\"nonzero\"></path></svg>",
+    "properties": {
+      "inlineSvg": true
+    }
+  },
+  "arcgis-map.svg": {
+    "svg": "https://experience.arcgis.com/builder/../cdn/1931/widgets/arcgis/arcgis-map/icon.svg",
+    "properties": {
+      "filename": "arcgis-map.svg",
+      "originalName": "default/arcgis-map.svg",
+      "path": "default/arcgis-map.svg",
+      "inlineSvg": true
+    }
+  }
+}

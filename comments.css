@@ -1,0 +1,176 @@
+body {
+    /*background-color: #f8f9fa;*/
+    margin: 0;
+    padding: 0;
+    background-image: url('back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.right_card {
+    background-color: #fffaf1 ;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    /* margin: auto; */
+    padding: 15px;
+    max-width: 600px;
+    position: absolute;
+    right: 400px; !important;
+    top: 80px; !important;
+
+    width: 90%;
+
+
+
+}
+
+.card-body {
+    height: 90%;}
+
+@media only screen and (min-width: 768px) {
+    .right_card {
+        flex-basis: 55%;
+    }
+}
+
+
+
+.left_card {
+    border: none;
+    flex-basis: 45%;
+
+
+}
+
+.card-header {
+    border-radius: 10px 20px 30px 40px;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control{
+    font-size: 13px;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.form-check-label a {
+    color: #007bff;
+
+}
+
+.form-check-label a:hover {
+    color:red ;
+}
+.form-group label {
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.form-check-label {
+    margin-right: 1rem;
+}
+
+.form-check-input:checked + .form-check-label:before {
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+
+
+label.form-check-label span {
+    color: #990000;
+
+}
+
+#voir {
+    position: absolute;
+    left: 80px; !important;
+    top: 230px; !important;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #888888;
+    font-size: 25px;
+    height: 25px;
+    width: 125px;
+    margin: 0 auto;
+    position: relative;
+    text-shadow: 0px 1px 0 #a2a2a2;
+}
+.rating-title {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+}
+.rating-star {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 50px; !important;
+    cursor: pointer;
+}
+.rating-star::before {
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    color: #888888;
+}
+.rating input {
+    display: none;
+}
+.rating input:checked ~ .rating-star::before {
+    color: #FFD700;
+}
+
+.rating {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.rating-title {
+    text-align: left;
+}
