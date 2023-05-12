@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
      if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['createButton']))
      {
          $db_conn=mysqli_connect("localhost","root","","map") or die ("connexion impossible: ".mysqli_connect_error());
@@ -25,9 +24,8 @@
 
 
 
-mysqli_close();
-?>
-=======
+mysqli_close($db_conn);
+
 
 session_start();
 use PHPMailer\PHPMailer\Exception;
@@ -131,7 +129,7 @@ function random_string($length) {
                     <h4  style="background-color: limegreen; border-color: limegreen;">Vérification email institutionnel</h4>
                 </div>
                 <div class="card-body" >
-                <form method="post" onsubmit="return validateCode( <?= $count ?>)" id="signup-form" action= <?= $check ? "signup.php" : "signup_DB.php" ?> >
+                <form method="post" onsubmit="return validateCode( <?= $count ?>)" id="signup-form" action= <?= $check ? "signup_DB.php" : "signup.php" ?> >
                         <div class="form-group mb-3">
                         <label > <?= $check ? "Verifié ! continuer ?" : "Code de verification" ?> </label> <br>
                         <?php if (!$check): ?>
@@ -153,4 +151,4 @@ function random_string($length) {
 <script src="verifMail.js"></script>
 </body>
 </html>
->>>>>>> 604ee3df1d7d7f3d3ddefbd07b5ddbd224bfcf46
+

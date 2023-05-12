@@ -9,23 +9,18 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['connectButton']))
         $motdepasse=$_POST['motdepasse'];
 
 
-        $sql1="select * from utilisateur where (email= $identifiant) or (matricule=$identifiant)";
-<<<<<<< HEAD
-        $query1=mysqli_query($db_conn,$sql1)or die (mysqli_error($db_conn));
-        if ((mysqli_num_rows($query1)=0)
-=======
-        $query1= mysqli_query($db_conn,$sql1)or die (mysqli_error($db_conn));
-        if (mysqli_num_rows($query1)==0)
->>>>>>> 604ee3df1d7d7f3d3ddefbd07b5ddbd224bfcf46
+        $sql1="SELECT * FROM `utilisateur` WHERE (email= '$identifiant') OR (matricule='$identifiant')";
+
+        $query1=mysqli_query($db_conn,$sql1) or die (mysqli_error($db_conn));
+        if ((mysqli_num_rows($query1)==0))
+
             {echo "ce compte n'existe pas" ;}
         else{
-            $sql2="select * from utilisateur where (email= $identifiant or matricule=$identifiant) and motdepasse=$motdepasse";
+            $sql2="SELECT * FROM `utilisateur` WHERE (`email`= '$identifiant') OR (`matricule`='$identifiant') AND `motdepasse`='$motdepasse'";
             $query2=mysqli_query($db_conn,$sql2)or die (mysqli_error($db_conn));
-<<<<<<< HEAD
-                if ((mysqli_num_rows($query2)=0)
-=======
-                if (mysqli_num_rows($query2)==0)
->>>>>>> 604ee3df1d7d7f3d3ddefbd07b5ddbd224bfcf46
+
+                if ((mysqli_num_rows($query2)==0))
+
                 {echo 'mot de passe incorrecte' ;}
 
         }
@@ -35,10 +30,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['connectButton']))
 
 
     }
-
+    mysqli_close($db_conn);
 }
 
-
-
-mysqli_close();
 ?>

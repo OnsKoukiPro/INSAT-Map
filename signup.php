@@ -18,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['createButton']))
         $sql1="INSERT INTO utilisateur VALUES ('$nom','$prenom','$email','$statut','$matricule','$motdepasse')";
         $query1; //mysqli_query($db_conn,$sql1)or die (mysqli_error($db_conn));
         if (true)
-           {echo 'creation de compte avec succees' ;}
+           {echo 'creation de compte avec succees' ;
+             echo "<a href='http://localhost:8000/?views=Vue' class='btn btn-primary'>Voir la Carte</a>";
+            }
         else {echo 'erreur de creation' ;}
 
     }

@@ -5,7 +5,7 @@ function validateMail() {
 
     // Récupérer les éléments du formulaire
 
-const email = document.getElementById('mail');
+const email = document.getElementById('email');
 
     // Valider les champs du formulaire
 
