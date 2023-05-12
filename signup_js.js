@@ -43,7 +43,7 @@ const accepterCheckbox = document.getElementById('accepter');
 
 
     if (!(/^\d{6}$/.test(matricule.value))) {
-        alert('La matricule doit être un numéro de 6 chiffres !"');
+        alert('La matricule doit être un numéro de 6 chiffres !');
         matricule.focus();
         return false;
     }

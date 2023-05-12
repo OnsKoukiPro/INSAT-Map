@@ -6,17 +6,28 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\Test\SendTestCase;
 
+const MAX_COUNT = 3;
+$count = 0;
 $check = false;
 
-if(isset($_POST['email']) || isset($_SESSION['verifcode'])){ // 
+echo $count.'test';
+if(isset($_POST['email']) || isset($_SESSION['verifcode'])){
+    /*
+    If this is the first visit : we must receive $_POST['email'] from verif_Mail.php
 
-    $_SESSION['email'] = $_POST['email'] ?? $_SESSION['email'];
+    If this was after fist visit : a code must have been submitted and set in the session (line 51 in this file)
+
+    ELse 
+    */
+
+    $_SESSION['email'] = $_POST['email'] ?? $_SESSION['email']; // Saving the email in the session
 
     if(isset($_SESSION['verificationcode']) && isset($_POST['verifcode']) ){
 
         $check = $_POST['verifcode'] == $_SESSION['verificationcode'];
         unset($_SESSION['verificationcode']);
-
+        $count = $check ? 0 : $count + 1 ;
+        echo $count.'test2';
     } else {
     
     
@@ -53,12 +64,7 @@ if(isset($_POST['email']) || isset($_SESSION['verifcode'])){ //
     $mail->Body = $message;
     
     // Send email
-    if($mail->send()) {
-        echo 'Email sent successfully !';
-    
-    } else {
-        echo 'Email sending failed: ' . $mail->ErrorInfo;
-    }
+    $mailCheck = $mail->send();
     
     }
 } else {
@@ -102,7 +108,7 @@ function random_string($length) {
                     <h4  style="background-color: limegreen; border-color: limegreen;">Vérification email institutionnel</h4>
                 </div>
                 <div class="card-body" >
-                <form method="post" onsubmit="return validateCode( <?= $count ?>)" id="signup-form" action= <?= $check ? "signup.php" : "signup_DB.php" ?> >
+                <form method="post" onsubmit="return validateCode( <?= $count ?>)" id="signup-form" action= <?= $check ? 'signup.php' : ($count < MAX_COUNT ? 'signup_DB.php' : 'verifMail.php') ?> >
                         <div class="form-group mb-3">
                         <label > <?= $check ? "Verifié ! continuer ?" : "Code de verification" ?> </label> <br>
                         <?php if (!$check): ?>
@@ -121,6 +127,9 @@ function random_string($length) {
         </div>
     </div>
 </div>
-<script src="verifMail.js"></script>
+<?php if($mailCheck): ?>
+<script> alert('Un code de verification a été enyoyé à votre mail'); </script>
+<?php endif; ?>
+<script src="verifMail_js.js"></script>
 </body>
 </html>

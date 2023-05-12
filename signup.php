@@ -124,6 +124,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['createButton']))
         </div>
     </div>
 </div>
-<script src="signup_js.js"></script>
+<script src="signup_js.js"> </script>
 </body>
 </html>

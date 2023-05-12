@@ -2,10 +2,9 @@ const email = document.getElementById('email');
 const maxCount = 3;
 function validateMail() {
 
-
     // Récupérer les éléments du formulaire
 
-const email = document.getElementById('mail');
+const email = document.getElementById('email');
 
     // Valider les champs du formulaire
 
@@ -20,5 +19,8 @@ const email = document.getElementById('mail');
 
 
 function validateCode( count ) {
+    if (count >= maxCount)
+        alert('Nombre d\'essais dépassé !');
+    return true;
 
 }
