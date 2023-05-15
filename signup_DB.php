@@ -58,7 +58,7 @@ if(isset($_POST['email']) || isset($_SESSION['verifcode'])){
     $to = $_SESSION['email'];
     $subject = 'Code de verification';
     $message = $code;
-    $mail->setFrom($smtp_username, 'Your Name');
+    $mail->setFrom($smtp_username, 'Carte Virtuelle Insat');
     $mail->addAddress($to);
     $mail->Subject = $subject;
     $mail->Body = $message;
